@@ -10,15 +10,15 @@ type stepsProps = {
 const Steps = ({ currentStep }: stepsProps) => {
   return (
     <div className="steps">
-      <div className={currentStep === 0 ? "step active" : "step"}>
+      <div className="step active">
         <AiOutlineUser />
         <p>Identificação</p>
       </div>
-      <div className={currentStep === 1 ? "step active" : "step"}>
+      <div className={`step ${currentStep >= 1 ? "active" : ""}`}>
         <AiOutlineStar />
         <p>Avaliação</p>
       </div>
-      <div className={currentStep === 2 ? "step active" : "step"}>
+      <div className={`step ${currentStep >= 2 ? "active" : ""}`}>
         <FiSend />
         <p>Envio</p>
       </div>
